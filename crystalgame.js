@@ -2,27 +2,27 @@ $(document).ready(function () {
 
     // Global scope 
 
-    var targetNumber;
+    var correctNumber;
     var userTotal = 0;
     var wins = 0;
     var losses = 0;
 
-    // Functions
+    // game
 
     function reset() {
         for(var i = 0; i < crystals.length; i++) {
             crystals[i].setAttribute("score", Math.floor(Math.random() * 18 + 1))
         }
-        targetNumber = Math.floor(Math.random() * 101 + 19);
+        correctNumber = Math.floor(Math.random() * 101 + 19);
         userTotal = 0;
         $("#total-score").text(userTotal);
-        $("#target-score").text(targetNumber);
+        $("#target-score").text(correctNumber);
     }
 
     function initialize() {
         crystals = document.getElementsByTagName("img")
         for(var i = 0; i < crystals.length; i++) {
-            crystals[i].setAttribute("score", Math.floor(Math.random() * 11 + 1))
+            crystals[i].setAttribute("score", Math.floor(Math.random() * 18 + 1))
             crystals[i].addEventListener("click", (args) => {
                 value = Math.round(args.target.getAttribute("score"))
                 userTotal = userTotal + value;
@@ -31,20 +31,20 @@ $(document).ready(function () {
                 logic();
             })
         }
-        targetNumber = Math.floor(Math.random() * 101 + 19);
-        $("#target-score").text(targetNumber);
+        correctNumber = Math.floor(Math.random() * 101 + 19);
+        $("#target-score").text(correctNumber);
         $("#wins").text(wins);
         $("#losses").text(losses);
         $("#total-score").text(userTotal);
     }
     function logic() {
-        if (userTotal === targetNumber) {
+        if (userTotal === correctNumber) {
             alert("You Win!");
             reset();
             wins++;
             $("#wins").text(wins);
         }
-        else if (userTotal > targetNumber) {
+        else if (userTotal > correctNumber) {
             alert("You lose!");
             reset();
             losses++;

@@ -1,0 +1,20 @@
+img {
+    height: 200px;
+    width: 200px;
+}
+body{
+    background-color: teal;
+}
+
+.container-fluid {
+
+    float: none;
+    margin: 0 auto;
+
+}
+
+.container{
+
+    background-color: gray;
+
+}
