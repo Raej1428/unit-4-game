@@ -18,3 +18,65 @@ body{
     background-color: gray;
 
 }
+
+.col-3-md {
+    float: left;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1333px){
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+   }
+
+   @media screen and (max-width: 1050px){
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+   }   
+
+@media screen and (max-width: 900px){
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+   }
+
+@media screen and (max-width: 768px) {
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+      
+}
+
+@media screen and (max-width: 500px) {
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+      
+}
+
+@media screen and (max-width: 340px) {
+    .background, .container {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
